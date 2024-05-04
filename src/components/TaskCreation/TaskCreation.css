@@ -1,0 +1,116 @@
+.TaskCreation {
+background-color: #171930;
+width:30%;
+padding: 5rem;
+position: fixed;
+}
+.taskCreationContent{
+  width:25rem;
+  height:34rem;
+  background-color: orange;
+  border-radius: 20px;
+}
+.TaskCreationTitle{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size:2rem;
+  text-align: center;
+  color: #fff;
+  
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+}
+.input-container{
+  margin-bottom: 2rem;
+  width: 20rem;
+  height:2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding-left: 1rem;
+}
+.description-container{
+  margin-bottom: 2rem;
+  width: 20rem;
+  height:7rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.button-blue {
+  margin-bottom: 2rem;
+  width: 8rem;
+  height:2rem;
+  font-size: 1rem;
+  background-color: #121325;;
+  color: white;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button-blue:hover {
+  background-color: #06060c;;
+}
+
+@media screen and (max-width: 768px) {
+  .TaskCreation {
+    background-color: #171930;
+    width:100%;
+    padding: 1.5rem;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    }
+  .taskCreationContent{
+      width:18rem;
+      height:22rem;
+      background-color: orange;
+      border-radius: 20px;
+    }
+    .TaskCreationTitle{
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      font-size:1rem;
+      text-align: center;
+      color: #fff; 
+    }
+    .input-container{
+      margin-bottom: 1rem;
+      width: 15rem;
+      height:1.5rem;
+      font-size: 0.5rem;
+      border-radius: 5px;
+      padding-left: 0.5rem;
+    }
+    .description-container{
+      margin-bottom: 1rem;
+      width: 15rem;
+      height:4rem;
+      font-size: 0.5rem;
+      border-radius: 5px;
+      padding-left: 0.5rem;
+      padding-top: 0.5rem;
+    }
+    .button-blue {
+      margin-bottom: 1rem;
+      width: 4rem;
+      height:1.5rem;
+      font-size: 0.5rem;
+      background-color: #121325;;
+      color: white;
+      padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+}

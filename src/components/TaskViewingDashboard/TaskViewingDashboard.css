@@ -1,0 +1,234 @@
+.TaskViewingDashboard {
+  display: flex;
+  flex-direction: column;
+  background-color: #121325;
+  width:100%;
+  padding:2rem;
+  padding-left: 35rem;
+  color: #fff;
+}
+.TaskViewingDashboardTitle{
+  font-size: 2rem;
+  text-align: center;
+ padding-top:2rem;
+  
+}
+.TaskViewingDashboardBottom{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.filter-select{
+  margin-bottom: 2rem;
+  width: 10rem;
+  height:2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-right: 4rem;
+}
+.filter-date{
+  margin-bottom: 2rem;
+  width: 10rem;
+  height:2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-right: 4rem;
+}
+.select-status{
+  font-size: 1rem;
+  border-radius: 5px;
+  width:2rem;
+}
+.filter-input{
+  height:2rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  margin-right: 2rem;
+}
+.task-list {
+  border: 1px solid #ccc;
+  background-color: rgb(58, 57, 57);
+  margin: 0 auto;
+  width:64rem;
+ 
+}
+.task-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.task-list th, .task-list td {
+  border: 1px solid #fff;
+  padding: 8px;
+  text-align: left;
+}
+.task-list th {
+  background-color: #333;
+  color: #fff;
+}
+.task-list tr:nth-child(even) {
+  background-color: #555;
+}
+.task-list tr:hover {
+  background-color: #777;
+}
+.task-list select {
+  width: 100%;
+  height: 100%;
+}
+.filter-button{
+  margin-bottom: 2rem;
+  width: 8rem;
+  height:2rem;
+  font-size: 1rem;
+  background-color: orange;
+  color: white;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease
+}
+.filter-button:hover {
+  background-color: darkorange;
+}
+.editButton{
+  height: 1.5rem;
+  width:1.5rem;
+  margin-right: 0.5rem;
+  /* margin-left: 1rem; */
+}
+.deleteButton{
+  height: 1.5rem;
+  width:1.5rem;
+  
+}
+.editContainer{
+  display: flex;
+  flex-direction: column;
+}
+.select-edit{
+  width: 20rem!important;
+  height: 2rem!important;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+}
+.input-edit-container{
+  margin-bottom: 0.5rem;
+  width: 20rem;
+  height:2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding-left: 1rem;
+}
+
+.status-circle {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+.status-color-div{
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .TaskViewingDashboard {
+    display: flex;
+    flex-direction: column;
+    background-color: #121325;
+    width:100%;
+    padding:2rem;
+    color: #fff;
+  }
+  .TaskViewingDashboardTitle{
+    font-size: 1rem;
+    text-align: center;
+  }
+  .TaskViewingDashboardBottom{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  .filter-select{
+    margin-bottom: 1rem;
+    width: 5rem;
+    height:1.5rem;
+    font-size: 0.5rem;
+    border-radius: 5px;
+    margin-right: 1rem;
+  }
+  .filter-date{
+    margin-bottom: 1rem;
+    width: 5rem!important;
+    height:1.5rem;
+    font-size: 0.5rem;
+    border-radius: 5px;
+    margin-right: 1rem;
+  }
+  .filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .filter-button{
+    margin-top: 1rem;
+    width: 4rem;
+    height:1.5rem;
+    font-size: 0.5rem;
+    background-color: orange;
+    color: white;
+    padding: 0.2rem 0.2rem ;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease
+  }
+  .task-list {
+    border: 1px solid #ccc;
+    background-color: rgb(58, 57, 57);
+    margin: 0 auto;
+    width:18rem;
+  }
+  .task-list th, .task-list td {
+    font-size: 14px;
+    padding: 6px;
+  }
+  .task-list tr {
+    display: block;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 8px;
+  }
+  .task-list tr:last-child {
+    border-bottom: none;
+  }
+  .task-list td, .task-list th {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .task-list td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  .task-list td:last-child {
+    flex-direction: row;
+    align-items: center;
+  }
+  .task-list td:last-child img {
+    margin: 0 4px;
+  }
+  thead {
+    display: none;
+  }
+
+  
+}
