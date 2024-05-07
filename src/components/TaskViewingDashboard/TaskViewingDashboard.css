@@ -33,7 +33,7 @@
 }
 .filter-date{
   margin-bottom: 2rem;
-  width: 10rem;
+  width: 10rem!important;
   height:2rem;
   font-size: 1rem;
   border-radius: 5px;
