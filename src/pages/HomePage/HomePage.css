@@ -1,29 +1,29 @@
-.nav{
-   height:5rem;
-   background-color: #090c14;
-   color: #fff; 
-   font-size: 2rem; 
-   display: flex;
-   align-items: center;
-   justify-content: center;
+.nav {
+  height: 5rem;
+  background-color: #090c14;
+  color: #fff;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-   overflow: hidden;
-   position: sticky;
-   top: 0;
-   width: 100%;
-   z-index: 1000;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
-.mainContainer{
-    display: flex;
+.mainContainer {
+  display: flex;
 }
 
 @media screen and (max-width: 768px) {
-    .nav {
-        height: 4rem; 
-        font-size: 1.5rem; 
-    }
-    .mainContainer{
-        display: flex;
-        flex-direction: column;
-    }
+  .nav {
+    height: 4rem;
+    font-size: 1.5rem;
+  }
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+  }
 }
