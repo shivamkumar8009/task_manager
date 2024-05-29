@@ -28,7 +28,9 @@ function TaskViewingDashboard() {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch("https://66346c589bb0df2359a17e03.mockapi.io/api/tasks");
+      const response = await fetch(
+        "https://6652d7f9813d78e6d6d65e3d.mockapi.io/v1/tasks"
+      );
       const data = await response.json();
       setTasks(data);
     } catch (error) {
@@ -93,13 +95,16 @@ function TaskViewingDashboard() {
       );
       setTasks(updatedTasks);
 
-      await fetch(`https://66346c589bb0df2359a17e03.mockapi.io/api/tasks/${taskId}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ status: newStatus }),
-      });
+      await fetch(
+        `https://6652d7f9813d78e6d6d65e3d.mockapi.io/v1/tasks/${taskId}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ status: newStatus }),
+        }
+      );
     } catch (error) {
       console.error("Error updating task status:", error);
     }
@@ -112,13 +117,16 @@ function TaskViewingDashboard() {
       );
       setTasks(updatedTasks);
 
-      await fetch(`https://66346c589bb0df2359a17e03.mockapi.io/api/tasks/${taskId}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ assignedTo: newAssignee }),
-      });
+      await fetch(
+        `https://6652d7f9813d78e6d6d65e3d.mockapi.io/v1/tasks/${taskId}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ assignedTo: newAssignee }),
+        }
+      );
     } catch (error) {
       console.error("Error reassigning task:", error);
     }
@@ -127,9 +135,12 @@ function TaskViewingDashboard() {
   const handleDeleteTask = async (taskId) => {
     if (window.confirm("Are you sure you want to delete this task?")) {
       try {
-        await fetch(`https://66346c589bb0df2359a17e03.mockapi.io/api/tasks/${taskId}`, {
-          method: "DELETE",
-        });
+        await fetch(
+          `https://6652d7f9813d78e6d6d65e3d.mockapi.io/v1/tasks/${taskId}`,
+          {
+            method: "DELETE",
+          }
+        );
         const updatedTasks = tasks.filter((task) => task.id !== taskId);
         setTasks(updatedTasks);
       } catch (error) {
@@ -159,13 +170,16 @@ function TaskViewingDashboard() {
         status: "",
       });
 
-      await fetch(`https://66346c589bb0df2359a17e03.mockapi.io/api/tasks/${editedTaskData.id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(editedTaskData),
-      });
+      await fetch(
+        `https://6652d7f9813d78e6d6d65e3d.mockapi.io/v1/tasks/${editedTaskData.id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(editedTaskData),
+        }
+      );
     } catch (error) {
       console.error("Error saving edited task:", error);
     }
@@ -180,11 +194,11 @@ function TaskViewingDashboard() {
   };
 
   return (
-       <div className="TaskViewingDashboard">
-       <div className="TaskViewingDashboardTitle">Dashboard</div>
-       <div className="TaskViewingDashboardBottom">
-         <div className="filter-container">
-           <select
+    <div className="TaskViewingDashboard">
+      <div className="TaskViewingDashboardTitle">Dashboard</div>
+      <div className="TaskViewingDashboardBottom">
+        <div className="filter-container">
+          <select
             value={statusFilter}
             onChange={(e) => handleFilterChange("status", e.target.value)}
             className="filter-select"
@@ -314,24 +328,26 @@ function TaskViewingDashboard() {
                       <td>{task.priority}</td>
                       <td>{task.assignedTo}</td>
                       <td>
-                      <div className="status-color-div">
-                        <select
-                          value={task.status}
-                          onChange={(e) =>
-                            handleStatusChange(task.id, e.target.value)
-                          }
-                          className="select-status"
-                        >
-                          <option value="">Select Status</option>
-                          <option value="Open">Open</option>
-                          <option value="In Progress">In Progress</option>
-                          <option value="Completed">Completed</option>
-                          <option value="Blocked">Blocked</option>
-                        </select>
-                        <div
-                          className="status-circle"
-                          style={{ backgroundColor: getStatusColor(task.status) }}
-                        ></div>
+                        <div className="status-color-div">
+                          <select
+                            value={task.status}
+                            onChange={(e) =>
+                              handleStatusChange(task.id, e.target.value)
+                            }
+                            className="select-status"
+                          >
+                            <option value="">Select Status</option>
+                            <option value="Open">Open</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Blocked">Blocked</option>
+                          </select>
+                          <div
+                            className="status-circle"
+                            style={{
+                              backgroundColor: getStatusColor(task.status),
+                            }}
+                          ></div>
                         </div>
                       </td>
                       <td>
@@ -361,18 +377,18 @@ function TaskViewingDashboard() {
 }
 
 function getStatusColor(status) {
-    switch (status) {
-      case "Open":
-        return "white";
-      case "In Progress":
-        return "green";
-      case "Completed":
-        return "yellow";
-      case "Blocked":
-        return "red";
-      default:
-        return "gray";
-    }
+  switch (status) {
+    case "Open":
+      return "white";
+    case "In Progress":
+      return "green";
+    case "Completed":
+      return "yellow";
+    case "Blocked":
+      return "red";
+    default:
+      return "gray";
   }
+}
 
 export default TaskViewingDashboard;

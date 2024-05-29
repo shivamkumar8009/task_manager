@@ -20,13 +20,16 @@ function TaskCreation({ onAddTasks }) {
 
   const handleAddTask = async () => {
     try {
-      const response = await fetch('https://66346c589bb0df2359a17e03.mockapi.io/api/tasks', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(taskData),
-      });
+      const response = await fetch(
+        "https://6652d7f9813d78e6d6d65e3d.mockapi.io/v1/tasks",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(taskData),
+        }
+      );
       if (response.ok) {
         const newTask = await response.json();
         onAddTasks([newTask]);

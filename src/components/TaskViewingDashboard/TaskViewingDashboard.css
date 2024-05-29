@@ -54,7 +54,7 @@
   border: 1px solid #ccc;
   background-color: rgb(58, 57, 57);
   margin: 0 auto;
-  width:64rem;
+  /* width:64rem; */
  
 }
 .task-list table {
